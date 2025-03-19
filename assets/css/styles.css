@@ -1,0 +1,118 @@
+@font-face{
+    font-family: 'Figtree';
+    src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Gray-500: hsl(0, 0%, 42%);
+    --Gray-950: hsl(0, 0%, 7%);
+    --shadow: 8px;
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Yellow);
+}
+
+.card{
+    width: 350px;
+    font-family: 'Figtree';
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: 1px solid var(--Gray-950);
+    box-shadow: var(--shadow) var(--shadow);
+    background-color: var(--White);
+    position: relative;
+    inset: 50% 0 0 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .figure{
+        width: 100%;
+        .figure__img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .inf{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .submit{
+            background-color: var(--Yellow);
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: none;
+            margin-bottom: 10px;
+            font-weight: 800;
+            font-size: 0.6rem;
+        }
+        form p{
+            font-size: 0.8rem;
+        }
+        .inf__title{
+            font-size: 1.2rem;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .inf__title:hover{
+            color: var(--Yellow) !important;
+        }
+        .inf__paragraph{
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.7;
+        }
+        .inf__avatar{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .avatar-fig{
+                width: 30px;
+                .avatar__img{
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+            .avatar__name{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+p{
+    font-size: 16px;
+    color: var(--Gray-500);
+    font-size: 0.9rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a{
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media (width < 376px ){
+    .card{
+        width: 85%;
+    }
+    .card .inf .inf__paragraph{
+        font-size: 0.8rem;
+    }
+}
